@@ -75,7 +75,7 @@ int StudentManager::findBestStudent() const {
     for (int i = 1; i < num_of_students; i++) {
         if (students[i].getRecord().getMidterm() + students[i].getRecord().getFinal()> maxScore) {
             maxScore = students[i].getRecord().getMidterm() + students[i] .getRecord().getFinal();
-            idx = i;
+            idx = students[i].getID();
         }
     }
     return idx;
